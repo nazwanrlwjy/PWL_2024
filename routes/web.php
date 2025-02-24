@@ -6,6 +6,14 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PhotoController;
 
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
+//View 
+// Route::get('/greeting', function () {
+// 	return view('blog.hello', ['name' => 'Nazwa']);
+// });
+
+
 Route::resource('photos', PhotoController::class);
 
 Route::resource('photos', PhotoController::class)->only([
